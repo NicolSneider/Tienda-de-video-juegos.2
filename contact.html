@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/logo1.png" type="image/x-icon">
 
   <!-- styles -->
   <link rel="stylesheet" href="styles/styles.css" />
@@ -33,11 +33,7 @@
     <div class="logo-box">
       <a href="index.html"><img src="assets/logo1.png" alt="" /></a>
     </div>
-    <nav class="main-menu">
-      <a href="index.html">Home</a>
-      <a class="span-tag" href="products.html">Shop<span>Hot</span></a>
-      <a href="contact.html">Contact</a></li>
-    </nav>
+
     <div class="main-icons">
       <i class="fa-solid fa-magnifying-glass"></i>
       <i class="fa-regular fa-heart"></i>
@@ -46,26 +42,55 @@
         <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-content">1</span></a>
       </div>
     </div>
+
+    <!-- Menu amburguesa -->      
+    <div class="bars__menu">
+      <span class="line1__bars-menu"></span> 
+      <span class="line2__bars-menu"></span>
+      <span class="line3__bars-menu"></span>
+   </div> 
+    <nav class="nav-bar">
+      <ul>
+        <li>
+      <a class = "span-tag"href="index.html" class="active">Inicio</a>
+    </li>
+    <li>
+      <a class ="span-tag"href="products.html" class="active">Tienda</a>
+    </li>
+    <li>
+      <a class ="span-tag"href="contact.html" class="active">Usuario</a>
+    </li>
+  </ul>
+    </nav>
+    <script src="js/script.js"></script>
   </header>
+
+  <script>
+    bars__menu = document.querySelector(".bars__menu");
+    bars__menu.onclick =function() {
+      navBar = document.querySelector(".nav-bar");
+      navBar.classList.toggle("active");
+    }
+  </script>
   <!-- main-header end -->
 
   <!-- main -->
   <main>
     <!-- page-title -->
     <section class="page-title">
-      <div class="pattern-layer" style="background-image: url(assets/page-title.jpeg);"></div>
+      <div class="pattern-layer" style="background-image: url(assets/.jpeg);"></div>
       <div class="auto-container">
         <div class="content-box">
           <h1>videogame store</h1>
           <div class="bread-crumb">
-            <i class="fa-solid fa-house"></i></i> Home <i class="fa-solid fa-chevron-right"></i> Contact Page
+            <i class="fa-solid fa-house"></i></i> Inicio<i class="fa-solid fa-chevron-right"></i> Usuario
           </div>
         </div>
       </div>
     </section>
     <!-- page-title end -->
 
-    <!-- address-section -->
+    <!--  -->
     <section class="address-section">
       <div class="auto-container">
         <div class="sec-title">
@@ -136,15 +161,13 @@
     <section class="clients-section">
       <div class="auto-container">
         <div class="clients-img">
-          <figure class="clients-logo-box"><img src="assets/creador1 de juegos.png"
+          <figure class="clients-logo-box"><img src="assets/creador1.png"
                 alt=""></figure>
-          <figure class="clients-logo-box"><img src="assets/creador2 de juegos.png"
+          <figure class="clients-logo-box"><img src="assets/creador2.png"
                 alt=""></figure>
-          <figure class="clients-logo-box"><img src="assets/creador3 de juegos.png"
+          <figure class="clients-logo-box"><img src="assets/creador3.png"
                 alt=""></figure>
-          <figure class="clients-logo-box"><img src="assets/creador4 de juegos.png"
-                alt=""></figure>
-          <figure class="clients-logo-box"><img src="assets/creador5 de juegos.png"
+          <figure class="clients-logo-box"><img src="assets/creador4.png"
                 alt=""></figure>
         </div>
       </div>
@@ -166,16 +189,18 @@
       </div>
       <div class="widget-content">
         <ul class="links-list">
-          <li><a href="#">accion</a></li>
-          <li><a href="#">terror</a></li>
+          <li><a href="#">Accion</a></li>
+          <li><a href="#">Terror</a></li>
           <li><a href="#">aventura</a></li>
+          <li><a href="#">Misterio</a></li>
+          <li><a href="#">Logica</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-widget">
       <div class="widget-title">
-        <h3>puntos de venta</h3>
+        <h3>Puntos de venta</h3>
       </div>
       <div class="widget-content">
         <ul class="links-list">
@@ -188,7 +213,7 @@
 
     <div class="footer-widget">
       <div class="widget-title">
-        <h3>informe</h3>
+        <h3>Informe</h3>
       </div>
       <div class="widget-content">
         <ul class="links-list">

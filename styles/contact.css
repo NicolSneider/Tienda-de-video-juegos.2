@@ -1,3 +1,7 @@
+.sec-title {
+  background-color: #ff0000af;
+  
+}
 .address-section{
   display: flex;
   justify-content: center;
@@ -5,7 +9,7 @@
   padding: 8rem;
 }
 .adress-location{
-  background: aqua;
+  background: rgb(228, 228, 228);
   border-radius: 19%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -39,7 +43,7 @@
 
 .clients-section{
   position: relative;
-  background: #fff7f5;
+  background: #c31c1c;
   padding: 44px 33px;
 }
 .clients-section .clients-logo-box{
@@ -56,6 +60,7 @@
   -ms-transition: all 300ms ease;
   -o-transition: all 300ms ease;
   transition: all 300ms ease;
+  max-width: 173px;
 }
 .clients-img{
   display: flex;

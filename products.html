@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/logo1.png" type="image/x-icon">
 
   <!-- styles -->
   <link rel="stylesheet" href="styles/styles.css" />
@@ -25,7 +25,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <title>Products</title>
+  <title>Productos</title>
 </head>
 <body>
   <!-- main header -->
@@ -33,11 +33,7 @@
     <div class="logo-box">
       <a href="index.html"><img src="assets/logo1.png" alt="" /></a>
     </div>
-    <nav class="main-menu">
-        <a href="index.html">Home</a>
-        <a class="span-tag" href="products.html">Shop<span>Hot</span></a>
-        <a href="contact.html">Contact</a></li>
-    </nav>
+
     <div class="main-icons">
       <i class="fa-solid fa-magnifying-glass"></i>
       <i class="fa-regular fa-heart"></i>
@@ -45,8 +41,37 @@
       <div class="shopping-icon">
         <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-content">1</span></a>
       </div>
-    </div>
-  </header>
+
+   <!-- Menu amburguesa -->      
+   <div class="bars__menu">
+    <span class="line1__bars-menu"></span> 
+    <span class="line2__bars-menu"></span>
+    <span class="line3__bars-menu"></span>
+ </div> 
+ <nav class="nav-bar">
+  <ul>
+    <li>
+         <a class = "span-tag"href="index.html" class="active">Inicio</a>
+    </li>
+    <li>
+      <a class ="span-tag"href="products.html" class="active">Tienda</a>
+ </li>
+ <li>
+  <a class ="span-tag"href="contact.html" class="active">Usuario</a>
+</li>
+  </ul>
+ </nav>
+ <script src="js/script.js"></script>
+
+</header>
+
+<script>
+  bars__menu = document.querySelector(".bars__menu");
+  bars__menu.onclick =function() {
+    navBar = document.querySelector(".nav-bar");
+    navBar.classList.toggle("active");
+  }
+</script>
   <!-- main-header end -->
 
   <!-- main -->
@@ -56,9 +81,9 @@
       <div class="pattern-layer" style="background-image: url(assets/page-title.jpeg);"></div>
       <div class="auto-container">
           <div class="content-box">
-              <h1>Shop Page</h1>
+              <h1>videogame store</h1>
               <div class="bread-crumb">
-                  <i class="fa-solid fa-house"></i></i> Home <i class="fa-solid fa-chevron-right"></i> Shop Page
+                  <i class="fa-solid fa-house"></i></i> Inicio <i class="fa-solid fa-chevron-right"></i> Productos
               </div>
           </div>
       </div>
@@ -66,111 +91,144 @@
     <!-- page-title end -->
 
     <!-- filters -->
-    <div class="filters-section">
-      <div class="section-one">
-        <p class="icon-fliter">
-          <i class="fa-solid fa-filter"></i>
-          <span>Filter</span>
-        </p>
-        <hr>
-        <span>Showing 1-12 of 50 Results</span>
-        <hr>
-        <div class="short-by">
-          <p>short by</p>
-          <select name="cars" id="cars">
-            <option value="9">9</option>
-            <option value="5">5</option>
-            <option value="7">7</option>
-            <option value="15">15</option>
-          </select>
-        </div> 
+    <div class="gallety">
+
+      <div class="content">
+          <img src="assets/Halo.png">
+          <h3>Halo</h3>
+          <p>Desarrollo: Bungie
+            Producción: Microsoft Game Studios
+            Distribución: Xbox Store,Jugadores: 1
+            Formato: Descarga
+            Textos: Español
+            Voces: Español</p>
+          <h6>$9,99 €</h6>
+          <ul>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star checked"></i></li>
+              <li><i class="fa fa-star"></i></li>
+          </ul>
+          <button class="buy-1">buy now</button>
       </div>
-      <div class="section-two">
-        <div class="short-by">
-          <p>short by</p>
-          <select name="cars" id="cars">
-            <option value="Popularity">Popularity</option>
-            <option value="New Trend">New Trend</option>
-            <option value="Top Sell">Top Sell</option>
-            <option value="Top Ratted">Top Ratted</option>
-          </select>
-        </div>
-        <button class="btn-filters">
-          <i class="fa-solid fa-arrow-up-short-wide"></i>
-        </button>
-        <button class="btn-filters">
-          <i class="fa-solid fa-arrow-down-short-wide"></i>
-        </button>
-      </div>
+
+      <div class="content">
+        <img src="assets/battlefield1.jpg">
+        <h3>Battlefield 1</h3>
+        <p>Modo: Videojuego multijugador
+          Desarrollador: DICE
+          Distribuidor: Electronic Arts
+          Plataformas: PlayStation 4, Xbox One, Microsoft Windows</p>
+        <h6>$21.99€</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1">buy now</button>
     </div>
 
-    <!-- shop-page -->
-    <section class="products-grid" id="products-grid">
+    <div class="content">
+      <img src="assets/grandtheftauto5.jpg">
+      <h3>Grand Theft Auto 5</h3>
+      <p>Plataformas: PlayStation 4, PlayStation 5, PlayStation 3, Xbox One, Xbox Series X|S, Xbox 360, Microsoft Windows
+        Diseñadores: Leslie Benzies, Imran Sarwar</p>
+      <h6>$8.74€</h6>
+      <ul>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star checked"></i></li>
+          <li><i class="fa fa-star"></i></li>
+      </ul>
+      <button class="buy-1">buy now</button>
+  </div>
+
+  <div class="content">
+    <img src="assets/call of duty.jpg">
+    <h3>Call of Duty Black ops 3</h3>
+    <p>Diseñador: Gavin Locke
+      Modo: Videojuego multijugador
+      Plataformas: PlayStation 4</p>
+    <h6>$59,13€</h6>
+    <ul>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star checked"></i></li>
+        <li><i class="fa fa-star"></i></li>
+    </ul>
+    <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Halo.png">
+  <h3>shoes</h3>
+  <p>sssss</p>
+  <h6>$465</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Halo.png">
+  <h3>shoes</h3>
+  <p>sssss</p>
+  <h6>$465</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Halo.png">
+  <h3>shoes</h3>
+  <p>sssss</p>
+  <h6>$465</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Halo.png">
+  <h3>shoes</h3>
+  <p>sssss</p>
+  <h6>$465</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+
+ 
       
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-2.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-3.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-4.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-5.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-6.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-7.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-      <a href="detail.html" class="product-box">
-        <figure class="item-box">
-            <img src="assets/shop-8.png" alt="">
-        </figure>
-        <div class="lower-content">
-            <p>Item product title</p>
-            <span class="price">$70.30</span>
-        </div>
-      </a>
-    </section>
+    <!-- shop-page -->
+    
     <!-- shop-page end -->
 
     <!-- Next pages -->
