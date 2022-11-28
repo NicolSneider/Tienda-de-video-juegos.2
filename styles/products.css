@@ -18,24 +18,11 @@ body{
 }
 
 .page-title{
-  position: relative;
-  background: #edf0f5;
-  padding: 95px 0px 88px 0px;
+  position: inherit;
+  background: #bebebe00;
+  padding: 90px 158px 88px 0px;
 }
-
-.page-title .pattern-layer{
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: repeat-x;
-  background-position: center;
-  animation: slide 100s linear infinite;
-  -webkit-animation: slide 100s linear infinite;
-}
+ 
 
 body{
   margin: 0;
@@ -51,16 +38,21 @@ h3{
 a{
   text-decoration: none;
 }
-.gallery{
-  display: flex;
-  flex-wrap: wrap;
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
+main{
+  width: 100%;
+display: flex;
+align-items: center;
+flex-direction: column;
 }
+.gallety{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 80%;
+  justify-content: center;
+  gap: 20px;
+}
+
 .content{
-  width: 20%;
   margin: 15px;
   box-sizing: border-box;
   float: left;
@@ -72,6 +64,10 @@ a{
   0 10px 10px  rgba(0,0,0,0.22);
   transition: .4s;
   background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .content:hover{
   box-shadow: 0 3px 6px  rgba(0,0,0,0.16),
@@ -79,15 +75,15 @@ a{
   transform: translate(0px, -8px);
 }
 img{
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 173px;
   text-align: center;
-  margin: 0 auto;
-  display: block;
+  margin: 4px auto;
+  display: initial;
 }
 p{
   text-align: center;
-  color: #b2bec3;
+  color: #030404;
   padding-top: 0 8px;
 }
 h6{

@@ -169,10 +169,10 @@ background-repeat: no-repeat;
 
 .pattern-layer{
   position: absolute;
-  right: 235px;
-  bottom: 2px;
-  width: 767px;
-  height: 444px;
+  right: 0px;
+  bottom: 0px;
+  width: 0px;
+  height: 0px;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -399,6 +399,8 @@ background-repeat: no-repeat;
 }
 .card-img img{
   padding: 0 .4rem;
+  height: 56px;
+  width: 60px;
 }
 .end-footer span{
   font-size: 1rem;

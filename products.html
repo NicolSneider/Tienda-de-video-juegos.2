@@ -34,20 +34,29 @@
       <a href="index.html"><img src="assets/logo1.png" alt="" /></a>
     </div>
 
-    <div class="main-icons">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <i class="fa-regular fa-heart"></i>
-      <i class="fa-regular fa-user"></i>
-      <div class="shopping-icon">
-        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-content">1</span></a>
-      </div>
-
    <!-- Menu amburguesa -->      
    <div class="bars__menu">
     <span class="line1__bars-menu"></span> 
     <span class="line2__bars-menu"></span>
     <span class="line3__bars-menu"></span>
  </div> 
+
+<div class="main-icons">
+      
+        <a onmouseover="showCart(this)" class="cart"><i class="fa-solid fa-cart-shopping"></i> <span class="cart-content count-product">0</span></a>
+      </div>
+    </div>
+    <div class="cart-products" id="products-id">
+      <div class="btn-close">
+        <p class="close-btn" onclick="closeBtn()">x</p>
+      </div>
+      <h3>Tu Compra</h3>
+      <div class="card-items">
+        <!-- Datos del carrito js -->
+      </div>
+      <h2>Total: <strong class="price-total">0</strong> COP</h2>
+    </div>
+
  <nav class="nav-bar">
   <ul>
     <li>
@@ -61,27 +70,19 @@
 </li>
   </ul>
  </nav>
- <script src="js/script.js"></script>
-
+ 
 </header>
 
-<script>
-  bars__menu = document.querySelector(".bars__menu");
-  bars__menu.onclick =function() {
-    navBar = document.querySelector(".nav-bar");
-    navBar.classList.toggle("active");
-  }
-</script>
   <!-- main-header end -->
 
   <!-- main -->
   <main>
     <!-- page-title -->
     <section class="page-title">
-      <div class="pattern-layer" style="background-image: url(assets/page-title.jpeg);"></div>
+      <div class="pattern-layer" style="background-image: url(assets/pateras.jpg);"></div>
       <div class="auto-container">
           <div class="content-box">
-              <h1>videogame store</h1>
+              <h1>Videogame Store</h1>
               <div class="bread-crumb">
                   <i class="fa-solid fa-house"></i></i> Inicio <i class="fa-solid fa-chevron-right"></i> Productos
               </div>
@@ -91,18 +92,18 @@
     <!-- page-title end -->
 
     <!-- filters -->
-    <div class="gallety">
+    <div class="gallety"> 
 
-      <div class="content">
+      <div class="content"> 
           <img src="assets/Halo.png">
-          <h3>Halo</h3>
+          <h3 class="title">Halo</h3>
           <p>Desarrollo: Bungie
             Producción: Microsoft Game Studios
             Distribución: Xbox Store,Jugadores: 1
             Formato: Descarga
             Textos: Español
             Voces: Español</p>
-          <h6>$9,99 €</h6>
+          <h6 class="price">$90,990 </h6>
           <ul>
               <li><i class="fa fa-star checked"></i></li>
               <li><i class="fa fa-star checked"></i></li>
@@ -110,7 +111,7 @@
               <li><i class="fa fa-star checked"></i></li>
               <li><i class="fa fa-star"></i></li>
           </ul>
-          <button class="buy-1">buy now</button>
+          <button class="buy-1" data-id="1">buy now</button>
       </div>
 
       <div class="content">
@@ -120,15 +121,15 @@
           Desarrollador: DICE
           Distribuidor: Electronic Arts
           Plataformas: PlayStation 4, Xbox One, Microsoft Windows</p>
-        <h6>$21.99€</h6>
+        <h6>$121.990</h6>
         <ul>
             <li><i class="fa fa-star checked"></i></li>
             <li><i class="fa fa-star checked"></i></li>
             <li><i class="fa fa-star checked"></i></li>
-            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star "></i></li>
             <li><i class="fa fa-star"></i></li>
         </ul>
-        <button class="buy-1">buy now</button>
+        <button class="buy-1" data-id="1">buy now</button>
     </div>
 
     <div class="content">
@@ -136,7 +137,7 @@
       <h3>Grand Theft Auto 5</h3>
       <p>Plataformas: PlayStation 4, PlayStation 5, PlayStation 3, Xbox One, Xbox Series X|S, Xbox 360, Microsoft Windows
         Diseñadores: Leslie Benzies, Imran Sarwar</p>
-      <h6>$8.74€</h6>
+      <h6>$88.740</h6>
       <ul>
           <li><i class="fa fa-star checked"></i></li>
           <li><i class="fa fa-star checked"></i></li>
@@ -153,7 +154,7 @@
     <p>Diseñador: Gavin Locke
       Modo: Videojuego multijugador
       Plataformas: PlayStation 4</p>
-    <h6>$59,13€</h6>
+    <h6>$159,130</h6>
     <ul>
         <li><i class="fa fa-star checked"></i></li>
         <li><i class="fa fa-star checked"></i></li>
@@ -165,10 +166,33 @@
 </div>
 
 <div class="content">
-  <img src="assets/Halo.png">
-  <h3>shoes</h3>
-  <p>sssss</p>
-  <h6>$465</h6>
+  <img src="assets/bloodborne.jpg">
+  <h3>Bloodborne</h3>
+  <p>Géneros: Videojuego de rol de acción, Videojuego de acción y aventura, Videojuego survival horror
+    Plataforma: PlayStation 4
+    Premios: Premio BAFTA de Videojuegos al Mejor Diseño de Juego</p>
+  <h6>$179.990</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/uncharted.jpg">
+  <h3>Uncharted</h3>
+  <p>Desarrollo: Naughty Dog
+    Producción: Sony
+    Distribución: SonyJugadores: 1
+    Formato: Blu-ray
+    Textos: Español
+    Voces: Español
+    Online: Sí</p>
+  <h6>$164,005</h6>
   <ul>
       <li><i class="fa fa-star checked"></i></li>
       <li><i class="fa fa-star checked"></i></li>
@@ -180,10 +204,13 @@
 </div>
 
 <div class="content">
-  <img src="assets/Halo.png">
-  <h3>shoes</h3>
-  <p>sssss</p>
-  <h6>$465</h6>
+  <img src="assets/Metroexodus.jpeg">
+  <h3>Metro Exodus</h3>
+  <p>Desarrollador: 4A Games
+    Diseñador: Viacheslav Aristov
+    Modo: Videojuego de un jugador
+    Plataformas: PlayStation 5, PlayStation 4, Xbox One</p>
+  <h6>$155,250</h6>
   <ul>
       <li><i class="fa fa-star checked"></i></li>
       <li><i class="fa fa-star checked"></i></li>
@@ -195,10 +222,84 @@
 </div>
 
 <div class="content">
-  <img src="assets/Halo.png">
-  <h3>shoes</h3>
-  <p>sssss</p>
-  <h6>$465</h6>
+  <img src="assets/Bigfoot.jpeg">
+  <h3>Bigfoot</h3>
+  <p>Desarrollador: CyberLight Game Studio
+    Distribuidor: CyberLight Game Studio
+    Plataforma: Microsoft Windows
+    Géneros: Videojuego independiente, Videojuego de disparos, Videojuego de Terro</p>
+  <h6>$100,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Readdeadredemption2.jpg">
+  <h3>Red Dead Redemption 2</h3>
+  <p>Desarrollador: Rockstar Games
+    Premios: The Game Award a la Mejor Interpretación, MÁS
+    Plataformas: PlayStation 4, Xbox One, Microsoft Windows, Google Stadia</p>
+  <h6>$167,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/New World.jpg">
+  <h3>New World</h3>
+  <p>Diseñador: John Liberto
+    Distribuidor: Amazon Game Studios
+    Modo: Videojuego multijugador
+    Plataforma: Microsoft Windows</p>
+  <h6>100,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Thewitcherwildhunt.jpg">
+  <h3>The Witcher 3 Wild Hunt</h3>
+  <p>Adaptaciones de: Saga del Brujo
+    Modo: Videojuego de un jugador
+    Desarrolladores: CD Projekt, CD Projekt RED
+    Géneros: Videojuego de mundo abierto</p>
+  <h6>$150,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star "></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Grounded.jpg">
+  <h3>Grounded</h3>
+  <p>Desarrollador: Obsidian Entertainment
+    Diseñador: Bobby Null
+    Modo: Videojuego multijugador
+    Distribuidor: Xbox Game Studios</p>
+  <h6>$119,000</h6>
   <ul>
       <li><i class="fa fa-star checked"></i></li>
       <li><i class="fa fa-star checked"></i></li>
@@ -210,10 +311,12 @@
 </div>
 
 <div class="content">
-  <img src="assets/Halo.png">
-  <h3>shoes</h3>
-  <p>sssss</p>
-  <h6>$465</h6>
+  <img src="assets/ForzaHorizon5.jpg">
+  <h3>Forza Horizon 5</h3>
+  <p>Distribuidor: Xbox Game Studios
+    Modos: Videojuego multijugador, Videojuego de un jugador
+    Premios: The Game Award for Best Audio Design</p>
+  <h6>$139,000</h6>
   <ul>
       <li><i class="fa fa-star checked"></i></li>
       <li><i class="fa fa-star checked"></i></li>
@@ -224,6 +327,50 @@
   <button class="buy-1">buy now</button>
 </div>
 
+<div class="content">
+  <img src="assets/fi22.jpg">
+  <h3>F1® 22</h3>
+  <p>Entra en la nueva era de la Formula 1® en EA SPORTS™ F1® 22, el videojuego oficial de FIA Formula One World Championship™ 2022</p>
+  <h6>$117,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/SnowRunner.jpg">
+  <h3>Snow Runner</h3>
+  <p>¡Prepárate para la nueva generación de esta experiencia campo a través! ¡Conduce potentes vehículos, supera a la naturaleza en entornos extremos y completa misiones solo o con hasta 3 amigos!</p>
+  <h6>$245,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
+
+<div class="content">
+  <img src="assets/Ride4.jpg">
+  <h3>Ride 4</h3>
+  <p>avivará vuestra llama competitiva con cientos de motos, docenas de circuitos y un nuevo nivel de realismo.</p>
+  <h6>$125,000</h6>
+  <ul>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star checked"></i></li>
+      <li><i class="fa fa-star"></i></li>
+  </ul>
+  <button class="buy-1">buy now</button>
+</div>
 
  
       
@@ -231,7 +378,7 @@
     
     <!-- shop-page end -->
 
-    <!-- Next pages -->
+    <!-- Next pages 
     <div class="pagination-wrapper centred">
       <ul class="pagination clearfix">
         <li><a href="#">Prev</a></li>
@@ -242,7 +389,7 @@
         <li><a href="#">5</a></li>
         <li><a href="#">Next</a></li>
       </ul>
-    </div>
+    </div>-->
     <!-- Next pages end -->
 
   </main>
@@ -250,7 +397,7 @@
   <!-- main-footer -->
   <footer class="main-footer">
     <figure class="footer-logo">
-      <a href="index.html"><img src="assets/logo.png" alt="" /></a>
+      <a href="index.html"><img src="assets/logo1.png" alt="" /></a>
     </figure>
 
     <div class="footer-widget">
@@ -322,5 +469,19 @@
     <span>Food © 2020 All Right Reserved</span>
   </div>
   <!-- main-footer end -->
+  <script src="js/script.js"></script>
+  <script>
+    bars__menu = document.querySelector(".bars__menu");
+    bars__menu.onclick =function() {
+      navBar = document.querySelector(".nav-bar");
+      navBar.classList.toggle("active");
+    }
+    function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
+  </script>
 </body>
 </html>
